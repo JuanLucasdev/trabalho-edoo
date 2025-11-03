@@ -1,0 +1,11 @@
+.app-conteiner{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+@media (min-width: 1024px) {
+  .meu-container {
+    flex-direction: row;    
+  }
+}

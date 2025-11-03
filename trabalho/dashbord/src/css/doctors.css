@@ -1,0 +1,117 @@
+/* doctors.css */
+
+/* Container principal da página */
+.page-container {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Formulário de adicionar médico */
+.add-doctor-form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.add-doctor-form input {
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.35rem;
+  border: 1px solid #ccc;
+}
+
+.add-doctor-form button {
+  background-color: #4f46e5;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.add-doctor-form button:hover {
+  background-color: #4338ca;
+}
+
+/* Tabela de médicos */
+.doctors-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.doctors-table th, .doctors-table td {
+  padding: 0.75rem 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.doctors-table th {
+  text-align: left;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.doctors-table td {
+  color: #111827;
+}
+
+/* Avaliação de pacientes */
+
+/* Container de avaliação por médico */
+.eval-container {
+  margin-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 8px;
+}
+
+/* Nome do médico */
+.eval-container strong {
+  font-size: 1rem;
+  color: #111827;
+}
+
+/* Lista de pacientes */
+.eval-patients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Item de paciente */
+.eval-patient-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.35rem;
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;
+}
+
+/* Botão de avaliação */
+.eval-patient-item button {
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.35rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.eval-patient-item button:hover {
+  background-color: #4338ca;
+}
+
+/* Mensagem quando não há pacientes */
+.no-patients {
+  font-style: italic;
+  color: #6b7280;
+}

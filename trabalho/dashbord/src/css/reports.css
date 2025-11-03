@@ -1,0 +1,75 @@
+.content-view {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.btn {
+  font-weight: 700;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.2s;
+}
+
+.btn.blue {
+  background-color: #2563eb;
+}
+.btn.blue:hover {
+  background-color: #1d4ed8;
+}
+
+.btn.green {
+  background-color: #16a34a;
+}
+.btn.green:hover {
+  background-color: #15803d;
+}
+
+.btn.red {
+  background-color: #dc2626;
+}
+.btn.red:hover {
+  background-color: #b91c1c;
+}
+
+.report-message {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #f3f4f6;
+  border-radius: 0.5rem;
+  color: #374151;
+  display: none;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.export-btn {
+  margin-top: 20px;
+  background-color: #0078d7;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.export-btn:hover {
+  background-color: #005fa3;
+}
+
+
+@media (min-width: 768px) {
+  .grid-cols-1 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+

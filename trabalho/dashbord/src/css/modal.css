@@ -1,0 +1,102 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-container {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.history-modal {
+    width: 500px;
+}
+
+.modal-container h2 {
+    margin-top: 0;
+}
+
+.modal-container label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.modal-container select,
+.modal-container textarea {
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.modal-container textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.modal-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-green { background: #34d399; color: #fff; }
+.btn-red { background: #f87171; color: #fff; }
+.btn-gray { background: #d1d5db; color: #000; }
+
+.history-entries {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+.history-entry {
+    border-left: 4px solid #3b82f6;
+    background: #eff6ff;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+.history-entry.internação { border-color: #f87171; background: #fee2e2; }
+.history-entry.liberação { border-color: #34d399; background: #dcfce7; }
+.history-entry['avaliação médica'] { border-color: #3b82f6; background: #eff6ff; }
+
+.entry-type {
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.entry-date {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 5px;
+}
+
+.entry-notes {
+    font-size: 14px;
+    color: #374151;
+}

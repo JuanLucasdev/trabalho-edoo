@@ -1,0 +1,55 @@
+/* src/components/BedMap.css */
+.bedmap-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.bed-card {
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.bed-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Status colors */
+.bed-free {
+    background-color: #c6f6d5;
+    border-color: #38a169;
+}
+
+.bed-occupied {
+    background-color: #fed7d7;
+    border-color: #e53e3e;
+}
+
+.bed-id {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.bed-status {
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.status-free { color: #38a169; }
+.status-occupied { color: #e53e3e; }
+
+.bed-patient {
+    font-size: 12px;
+    color: #4a5568;
+    font-weight: 500;
+}

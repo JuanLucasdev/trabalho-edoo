@@ -1,6 +1,14 @@
 #include <iostream>
+#include <string>
+
 #include "Hospital.h"
+#include "Paciente.h"
+#include "Medico.h"
+
 using namespace std;
+
+// Main.cpp
+
 
 int main() {
     Hospital h1;
@@ -17,12 +25,14 @@ int main() {
         cout << "7 - Relatório\n";
         cout << "8 - Exportar JSON\n";
         cout << "9 - Resetar hospital\n";
+        cout << "10 - Avaliar paciente (médico)\n";
         cout << "0 - Sair\n> ";
         int op;
         cin >> op;
 
         switch (op) {
             case 1: {
+                // Criar hospital com nome e quantidade inicial de leitos
                 string nome;
                 int qtd;
                 cout << "Nome do hospital: ";
@@ -33,6 +43,7 @@ int main() {
                 break;
             }
             case 2: {
+                // Cadastrar paciente
                 long int id;
                 string nome, diag;
                 short int idade;
@@ -44,6 +55,7 @@ int main() {
                 break;
             }
             case 3: {
+                // Internar paciente em leito escolhido
                 long int id;
                 int leito;
                 cout << "ID do paciente: "; cin >> id;
@@ -52,18 +64,60 @@ int main() {
                 break;
             }
             case 4: {
+                // Liberar leito por número
                 int leito;
                 cout << "Número do leito: "; cin >> leito;
                 h1.liberarLeito(leito);
                 break;
             }
-            case 5: h1.listarLeitos(); break;
-            case 6: h1.listarPacientes(); break;
-            case 7: h1.relatorio(); break;
-            case 8: h1.exportarJSON("hospital.json"); break;
-            case 9: h1.resetar(); break;
-            case 0: sair = true; break;
-            default: cout << "Opção inválida.\n";
+            case 5:
+                h1.listarLeitos();
+                break;
+            case 6:
+                h1.listarPacientes();
+                break;
+            case 7:
+                h1.relatorio();
+                break;
+            case 8:
+                h1.exportarJSON("hospital.json");
+                break;
+            case 9:
+                h1.resetar();
+                break;
+
+            case 10: {
+                // médico avalia paciente por ID.
+                long int id;
+                cout << "ID do paciente para avaliação: ";
+                cin >> id;
+
+                bool encontrado = false;
+
+                // Itera sobre os pacientes cadastrados
+                for (auto& pac : h1.getPacientes()) {
+                    if (pac.getid() == id) {
+                        encontrado = true;
+
+                        // Instãncia um médico
+                        Medico m(1,"Carlos", 45, "Clínico Geral", "CRM-1234");
+                        m.avaliarPaciente(h1, pac);
+                        break;
+                    }
+                }
+
+                if (!encontrado) {
+                    cout << "Paciente não encontrado.\n";
+                }
+                break;
+            }
+
+            case 0:
+                sair = true;
+                break;
+
+            default:
+                cout << "Opção inválida.\n";
         }
     }
 
