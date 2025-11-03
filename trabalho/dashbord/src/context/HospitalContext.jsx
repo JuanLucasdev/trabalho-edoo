@@ -160,7 +160,6 @@ export const HospitalProvider = ({ children }) => {
   };
 
   const removerMedico = async (id) => {
-    // Backend não tem DELETE para médicos, podemos filtrar no front
     setDoctors(prev => prev.filter(d => d.id !== id));
   };
 
